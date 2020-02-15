@@ -12,6 +12,7 @@ const kegList = [
 
 function KegList(){
   return (
+    <BrowserRouter>
     <div>
       <hr/>
       {kegList.map((keg, index) =>
@@ -22,6 +23,7 @@ function KegList(){
         key={index}/>
       )}
     </div>
+    </BrowserRouter>
   );
 }
 
