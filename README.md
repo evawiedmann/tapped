@@ -9,7 +9,7 @@ This application was made as part of a coding project by Eva Wiedmann, a student
 
 MORE.
 
-IMAGE
+https://docs.google.com/document/d/1FObFnw1z06N5eqUFsHQcPLfMlFKllVQ_MhAMw5thkkU/edit
 
 ## Setup/Installation instructions:
 * Click the `Clone or download` button and copy the link.
