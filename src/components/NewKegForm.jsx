@@ -7,19 +7,23 @@ function NewKegForm(){
         <input
           type='text'
           id='name'
-          placeholder='Beer Name'/>
+          placeholder='Beer Name'
+          ref={(input) => {_name = input}}/>
         <input
           type='text'
           id='brand'
-          placeholder='Brewery Name'/>
+          placeholder='Brewery Name'
+          ref={(input) => {brand = input}}/>
         <input
           type='text'
           id='price'
-          placeholder='Price Per Keg'/>
+          placeholder='Price Per Keg'
+          ref={(input) => {_price = input}}/>
         <input
           type='text'
           id='alcoholContent'
-          placeholder='ABV'/>
+          placeholder='ABV'
+          ref={(input) => {_abv = input}}/>
         <button type='submit'>Add!</button>
       </form>
     </div>

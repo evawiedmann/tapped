@@ -7,13 +7,18 @@ import { Switch, Route, Link } from 'react-router-dom';
 import './App.css';
 
 function App() {
+  let content = {
+    width: '400px',
+    float: 'left',
+  }
+
   return (
-    <div className="App">
-      <Header/>
-      <Switch>
-      <Route exact path='/' component={KegList} />
-      <Route path='/newkeg' component={NewKegForm} />
-      </Switch>
+    <div style={content}>
+    <Header/>
+    <Switch>
+    <Route exact path='/' component={KegList} />
+    <Route path='/newkeg' component={NewKegForm} />
+    </Switch>
     </div>
   );
 }

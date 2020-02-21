@@ -1,13 +1,13 @@
 import React from "react";
 
-const kegList = [
-  {
-    name: "Eye of Newt",
-    brand: "Witch's Brewery",
-    price: "100",
-    alcoholContent: "7"
-  }
-];
+// const kegList = [
+//   {
+//     name: "Eye of Newt",
+//     brand: "Witch's Brewery",
+//     price: "100",
+//     alcoholContent: "7"
+//   }
+// ];
 
 class KegList extends React.Component{
 
