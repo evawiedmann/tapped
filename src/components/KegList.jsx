@@ -21,12 +21,8 @@ class KegList extends React.Component{
         brand={keg.brand}
         price={keg.price}
         alcoholContent={keg.alcoholContent}
-        key={index}/>
-        </p>
-        <p onClick={this.sellPint}style={sellPint}>Sell Pint</p> {this.state.totalPints}
+        <p onClick={this.sellPint}style={sellPint}>Sell Pint</p>{this.state.totalPints}/>
         </div>
-        </div>
-      )
     }
 
   constructor(props) {
