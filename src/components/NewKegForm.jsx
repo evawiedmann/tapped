@@ -1,6 +1,53 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { Router } from 'react-router-dom';
 
-function NewKegForm(){
+function NewKeg(props){
+  let _name = null
+  let _brand = null
+  let _price = 0
+  let _abv = 0
+
+  function postKeg(event){
+    event.preventDefault()
+    props.onNewKegCreation({name: _name.value, brand: _brand.value, price: price.value, abv: _abv.value, reaminingPints: [124]})
+    _name.value = ''
+    _brand.value = ''
+    _price.value = ''
+    _abv.value = ''
+  }
+  let post = {
+
+    height: '70px',
+    width: '380px',
+    border: '1px solid lightgrey',
+    marginLeft: '425px',
+    backgroundColor: 'lightblue',
+    paddingRight: '20px',
+  }
+
+
+  let happening = {
+    border: '2px solid #4287f5',
+    color: '#4287f5',
+    marginTop: '15px',
+    height: '30px',
+    width: '280px',
+    float: 'right',
+    paddingTop: '8px',
+    paddingLeft: '10px',
+    backgroundColor: 'white',
+  }
+
+  let maroon = {
+    height: '29px',
+    width: '29px',
+    border: '1px solid darkred',
+    backgroundColor: 'darkred',
+    marginTop: '20px',
+    marginLeft: '40px',
+  }
+
   return (
     <div>
       <form>
@@ -13,7 +60,7 @@ function NewKegForm(){
           type='text'
           id='brand'
           placeholder='Brewery Name'
-          ref={(input) => {brand = input}}/>
+          ref={(input) => {_brand = input}}/>
         <input
           type='text'
           id='price'
@@ -29,5 +76,4 @@ function NewKegForm(){
     </div>
   );
 }
-
 export default NewKegForm;

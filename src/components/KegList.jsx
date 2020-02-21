@@ -10,6 +10,24 @@ import React from "react";
 // ];
 
 class KegList extends React.Component{
+  render(){
+    return(
+
+      <div>
+      <hr/>
+      <p>
+      {kegList.map((keg, index) =>
+        <Keg name={keg.name}
+        brand={keg.brand}
+        price={keg.price}
+        alcoholContent={keg.alcoholContent}
+        key={index}/>
+        </p>
+        <p onClick={this.sellPint}style={sellPint}>Sell Pint</p> {this.state.totalPints}
+        </div>
+        </div>
+      )
+    }
 
   constructor(props) {
     console.log(props)
@@ -57,24 +75,6 @@ class KegList extends React.Component{
       backgroundColor: 'darkred',
       marginTop: '-15%',
       marginLeft: '40px',
-    }
-
-    return(
-
-      <div>
-      <hr/>
-      <p>
-      {kegList.map((keg, index) =>
-        <Keg name={keg.name}
-        brand={keg.brand}
-        price={keg.price}
-        alcoholContent={keg.alcoholContent}
-        key={index}/>
-        </p>
-        <p onClick={this.sellPint}style={sellPint}>Sell Pint</p> {this.state.totalPints}
-        </div>
-        </div>
-      )
     }
   }
   export default KegList;
