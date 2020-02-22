@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import KegList from './components/KegList';
 import NewKeg from './components/NewKeg';
 import Header from './components/Header'
+import Error404 from './Error404';
 import { Switch, Route, Link } from 'react-router-dom';
 import './App.css';
 

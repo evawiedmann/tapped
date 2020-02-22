@@ -10,7 +10,6 @@ const render = (component) => {
   ReactDOM.render(
     <AppContainer>
       <HashRouter>
-        <Component/>
       </HashRouter>
     </AppContainer>,
     document.getElementById('react-app-root')
