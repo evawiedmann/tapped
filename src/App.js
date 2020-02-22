@@ -18,6 +18,7 @@ function App() {
     <Switch>
     <Route exact path='/' component={KegList} />
     <Route path='/newkeg' component={NewKeg} />
+    <Route component={Error404} />
     </Switch>
     </div>
   );
