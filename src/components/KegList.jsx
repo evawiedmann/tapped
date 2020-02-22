@@ -16,7 +16,7 @@ class KegList extends React.Component{
       <div>
       <hr/>
       <p>
-      {kegList.map((keg, index) =>
+      {props.kegList.map((keg, index) =>
         <Keg name={keg.name}
         brand={keg.brand}
         price={keg.price}
@@ -24,16 +24,6 @@ class KegList extends React.Component{
         <p onClick={this.sellPint}style={sellPint}>Sell Pint</p>{this.state.totalPints}/>
         </div>
     }
-
-  constructor(props) {
-    console.log(props)
-    super(props)
-    this.state = {
-      totalPints: 0,
-    }
-    console.log(this)
-    this.sellPint = this.sellPint.bind(this)
-  }
 
   sellPint(){
     let pintsVar = this.state.totalPints
