@@ -1,6 +1,21 @@
 import React from "react";
 
     class KegList extends React.Component{
+
+      constructor(props) {
+        super(props)
+        this.state = {
+          masterKegs: []
+        }
+        this.addNewKegToList = this.addNewKegToList.bind(this)
+      }
+      addNewKegToList(tweet){
+        var newMasterKegs = this.state.masterKegs.slice()
+        newMasterKegs.push(tweet)
+        this.setState({masterKegs: newMasterKegs})
+      }
+
+      render() {
       return(
 
         <div>
@@ -53,4 +68,5 @@ import React from "react";
           }
         }
       }
+    }
         export default KegList;
