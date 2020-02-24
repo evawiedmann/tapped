@@ -1,8 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
-import KegList from './components/KegList';
-import NewKeg from './components/NewKeg';
 import Header from './components/Header'
+import KegList from './components/KegList';
+import NewKegControl from './components/NewKegControl';
 import Error404 from './Error404';
 import { Switch, Route, Link } from 'react-router-dom';
 import './App.css';
@@ -18,7 +17,7 @@ function App() {
     <Header/>
     <Switch>
     <Route exact path='/' component={KegList} />
-    <Route path='/newkeg' component={NewKeg} />
+    <Route path='/newkeg' component={NewKegControl} />
     <Route component={Error404} />
     </Switch>
     </div>
