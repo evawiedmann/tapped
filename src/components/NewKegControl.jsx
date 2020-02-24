@@ -1,8 +1,8 @@
 import React from 'react';
 import ConfirmationQuestions from './ConfirmationQuestions';
-import NewTicketForm from './NewTicketForm';
+import NewKegForm from './NewKegForm';
 
-class NewTicketControl extends React.Component {
+class NewKegControl extends React.Component {
 
 constructor(props) {
   super(props);
@@ -19,7 +19,7 @@ handleTroubleshootingConfirmation(){
 render(){
   let currentlyVisibleContent = null;
   if (this.state.formVisibleOnPage){
-    currentlyVisibleContent = <NewTicketForm />;
+    currentlyVisibleContent = <NewKegForm />;
   } else {
     currentlyVisibleContent = <ConfirmationQuestions onTroubleshootingConfirmation={this.handleTroubleshootingConfirmation}/>;
   }
@@ -31,4 +31,4 @@ render(){
 }
 }
 
-export default NewTicketControl;
+export default NewKegControl;

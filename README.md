@@ -1,18 +1,17 @@
-Tapped
+# Tapped
 
-By Eva Wiedmann
-
-2020-02-21
+### By Eva Wiedmann, 2020-02-21
 
 ## Description:
-This application was made as part of a coding project by Eva Wiedmann, a student at _[Epicodus](http://www.epicodus.com)_, a vocational school for technology careers based in Portland, OR. The project is designed to create an KegList
+This application was made as part of a coding project by Eva Wiedmann, a student at _[Epicodus](http://www.epicodus.com)_, a vocational school for technology careers based in Portland, OR. The project is designed to create an interactive keg library for to keep track of inventory for a hypothetical tap room.
 
-MORE.
+## Component and Routing Structure
 
+Week 1
 https://docs.google.com/document/d/1FObFnw1z06N5eqUFsHQcPLfMlFKllVQ_MhAMw5thkkU/edit
 
-
-
+Week 2
+* Change KegList to state, move EditKeg and NewKeg below KegList.
 https://docs.google.com/document/d/1FuV-aq66H4RgTJKcFpCJ3WkInlnVixLiYzXRAPUW2Yc/edit
 
 ## Setup/Installation instructions:

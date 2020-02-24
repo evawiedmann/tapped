@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from './components/Header'
-import KegList from './components/KegList';
-import NewKegControl from './components/NewKegControl';
+import Header from './Header'
+import KegList from './KegList';
+import NewKegForm from './NewKegForm';
 import Error404 from './Error404';
 import { Switch, Route, Link } from 'react-router-dom';
 import './App.css';
@@ -17,7 +17,7 @@ function App() {
     <Header/>
     <Switch>
     <Route exact path='/' component={KegList} />
-    <Route path='/newkeg' component={NewKegControl} />
+    <Route path='/NewKegForm' component={NewKegForm} />
     <Route component={Error404} />
     </Switch>
     </div>

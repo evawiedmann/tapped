@@ -6,14 +6,14 @@ class KegList extends React.Component{
     console.log(props)
     super(props)
     this.state = {
-      totalPints: 0,
+      totalPints: 124,
     }
     console.log(this)
     this.sellPint = this.sellPint.bind(this)
   }
   sellPint(){
     let pintsVar = this.state.totalPints
-    pintsVar += 1
+    pintsVar -= 1
     this.setState({totalPints: pintsVar})
     console.log(pintsVar)
 
