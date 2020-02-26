@@ -44,7 +44,7 @@ class KegList extends React.Component{
       height: '29px',
       width: '29px',
       border: '1px solid darkred',
-      backgroundColor: 'darkred',
+      // backgroundColor: 'darkred',
       marginTop: '-15%',
       marginLeft: '40px',
     }
@@ -53,7 +53,7 @@ class KegList extends React.Component{
       <div style={kegStyle}>
         <h4 style={kegContent}> {this.props.content}</h4>
         <div style={square}>
-          <p onClick={this.sellPint}style={anotherPint}>Sell</p> {this.state.totalPints}
+          <p onClick={this.sellPint}style={anotherPint}>Sell</p><p>Pints Remaining:</p> {this.state.totalPints}
         </div>
       </div>
 

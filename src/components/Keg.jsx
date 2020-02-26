@@ -1,5 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
+import EditKeg from './../EditKeg'
+import { Link } from 'react-router-dom';
+import { Router } from 'react-router-dom';
 
 function Keg(props){
   return (
@@ -13,15 +15,38 @@ function Keg(props){
       <p><em>{props.price}</em></p>
       <p><em>{props.alcoholContent}</em></p>
       <hr/>
-    </div>
-  );
+      </div>
+    );
+  }
+
+  function editCurrentKeg(){
+    (<EditKeg
+      name = {props.name}
+      brand = {props.brand}
+      price = {props.price}
+      ABV = {props.ABV}/>
+
+    )
+  }else {
+    (null)
+  }
 }
 
-Keg.propTypes = {
-  name: PropTypes.string.isRequired,
-  brand: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
-  alcoholContent: PropTypes.number.isRequired
-};
+
+return (
+  <div>
+  {content}
+  <p className='button' onClick={()=> onEditClick()}>Edit Keg Information</p>
+    </div>
+  );
+}else {
+  return(
+    <div>
+    {content}
+    </div>
+  )
+}
+}
+
 
 export default Keg;
