@@ -10,11 +10,11 @@ function NewKeg(props){
 
   function postKeg(event){
     event.preventDefault()
-    props.onNewKegCreation({name: _name.value, brand: _brand.value, price: _price.value, abv: _abv.value, reaminingPints: [124]})
-    _name.value = ''
-    _brand.value = ''
-    _price.value = ''
-    _abv.value = ''
+    props.onNewKegCreation({name: _name.value, brand: _brand.value, price: _price.value, abv: _abv.value, reaminingPints: [124]});
+    _name.value = '';
+    _brand.value = '';
+    _price.value = '';
+    _abv.value = '';
   }
   let post = {
 
@@ -49,7 +49,7 @@ function NewKeg(props){
   }
 
   return (
-    <div>
+    <div onSubmit={postKeg}>
       <form>
         <input
           type='text'
@@ -71,7 +71,7 @@ function NewKeg(props){
           id='alcoholContent'
           placeholder='ABV'
           ref={(input) => {_abv = input}}/>
-        <button type='submit'>Add!</button>
+          <input type="submit" value="Add" />
       </form>
     </div>
   );

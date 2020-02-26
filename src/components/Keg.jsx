@@ -36,7 +36,7 @@ function Keg(props){
 return (
   <div>
   {content}
-  <p className='button' onClick={()=> onEditClick()}>Edit Keg Information</p>
+  <p className='button' onClick={()=> editCurrentKeg()}>Edit Keg Information</p>
     </div>
   );
 }else {
