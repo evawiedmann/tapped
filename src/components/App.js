@@ -11,7 +11,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      allKegs: [];
+      allKegs: [],
     }
     this.handleAddNewKeg = this.handleAddNewKeg.bind(this)
     this.sellPint = this.sellPint.bind(this)
