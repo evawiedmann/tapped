@@ -10,10 +10,19 @@ import './App.css';
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      allKegs: [];
+    }
+    this.handleAddNewKeg = this.handleAddNewKeg.bind(this)
+
+    handleAddNewKeg(keg) {
+      let list = this.state.allKegs.slice();
+      list.push(keg)
+      this.setState({allKegs: list})
+    }
+
+    }
   }
-
-
-
 
 
 
@@ -32,6 +41,7 @@ class App extends React.Component {
     </Switch>
     </div>
   );
+}
 }
 
 export default App;
