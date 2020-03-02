@@ -14,17 +14,20 @@ class App extends React.Component {
       allKegs: [];
     }
     this.handleAddNewKeg = this.handleAddNewKeg.bind(this)
+    this.sellPint = this.sellPint.bind(this)
 
     handleAddNewKeg(keg) {
       let list = this.state.allKegs.slice();
       list.push(keg)
       this.setState({allKegs: list})
     }
-
+    sellPint(){
+      let pintsVar = this.state.totalPints
+      pintsVar -= 1
+      this.setState({totalPints: pintsVar})
+    }
     }
   }
-
-
 
   let content = {
     width: '400px',

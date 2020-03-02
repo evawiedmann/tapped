@@ -1,23 +1,7 @@
 import React from 'react'
 
-class KegList extends React.Component{
-
-  constructor(props) {
-    console.log(props)
-    super(props)
-    this.state = {
-      totalPints: 124,
-    }
-    console.log(this)
-    this.sellPint = this.sellPint.bind(this)
-  }
-  sellPint(){
-    let pintsVar = this.state.totalPints
-    pintsVar -= 1
-    this.setState({totalPints: pintsVar})
-    console.log(pintsVar)
-
-  }
+function KegList(props) {
+  
   render(){
     let kegStyle = {
       height: '90px',
