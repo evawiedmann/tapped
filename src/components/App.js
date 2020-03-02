@@ -35,8 +35,8 @@ class App extends React.Component {
     <div style={content}>
     <Header/>
     <Switch>
-    <Route exact path='/' component={KegList} />
-    <Route path='/NewKegForm' component={NewKegForm} />
+    <Route exact path='/' render={()=><KegList allKegs={this.state.allKegs} />
+    <Route path='/NewKegForm' render={()=><NewKegForm handleAddNewKeg={this.handleAddNewKeg} />
     <Route component={Error404} />
     </Switch>
     </div>
