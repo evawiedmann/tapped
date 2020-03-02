@@ -7,7 +7,16 @@ import Error404 from './Error404';
 import { Switch, Route, Link } from 'react-router-dom';
 import './App.css';
 
-function App() {
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+
+
+
+
+
   let content = {
     width: '400px',
     float: 'left',

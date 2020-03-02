@@ -10,7 +10,7 @@ function NewKeg(props){
 
   function postKeg(event){
     event.preventDefault()
-    props.onNewKegCreation({name: _name.value, brand: _brand.value, price: _price.value, abv: _abv.value, reaminingPints: [124]});
+    props.createKeg({name: _name.value, brand: _brand.value, price: _price.value, abv: _abv.value, reaminingPints: [124]});
     _name.value = '';
     _brand.value = '';
     _price.value = '';
