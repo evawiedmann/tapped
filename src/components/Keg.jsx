@@ -21,6 +21,7 @@ function Keg(props){
 
   function editCurrentKeg(){
     (<EditKeg
+      id = {props.id}
       name = {props.name}
       brand = {props.brand}
       price = {props.price}
@@ -28,7 +29,7 @@ function Keg(props){
 
     )
   }else {
-    (null)
+    null
   }
 }
 
