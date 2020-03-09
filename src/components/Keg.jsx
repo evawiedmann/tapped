@@ -5,9 +5,10 @@ import { Router } from 'react-router-dom';
 function Keg(props){
   return (
     <div>
-      <h3>{props.name} - made by - {props.brand}</h3>
+      <h3>{props.name}</h3>
+      <h3>{props.brand}</h3>
       <h4>{props.price}</h4>
-      <h4>{props.ABV}</h4>
+      <h4>{props.abv}</h4>
       <hr/>
       </div>
     );
@@ -18,7 +19,7 @@ function Keg(props){
   //     name = {props.name}
   //     brand = {props.brand}
   //     price = {props.price}
-  //     ABV = {props.ABV}/>
+  //     abv = {props.abv}/>
   //
   //   )
   // }else {

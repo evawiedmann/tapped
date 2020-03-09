@@ -9,7 +9,14 @@ function NewKeg(props){
 
   function postKeg(event){
     event.preventDefault();
-    props.createKeg({name: _name.value, brand: _brand.value, price: _price.value, abv: _abv.value, reaminingPints: [124]});
+    props.createKeg({
+      name: _name.value,
+      brand: _brand.value,
+      price: _price.value,
+      abv: _abv.value,
+      remainingPints: [124]
+    });
+
     _name.value = '';
     _brand.value = '';
     _price.value = '';
@@ -68,7 +75,7 @@ function NewKeg(props){
     ref={(input) => {_price = input}}/>
     <input
     type='text'
-    id='alcoholContent'
+    id='abv'
     placeholder='ABV'
     ref={(input) => {_abv = input}}/>
     <div className='button'>
