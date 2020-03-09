@@ -6,12 +6,11 @@ function Keg(props){
   return (
     <div>
       <h3>{props.name} - made by - {props.brand}</h3>
-      <p><em>{props.price}</em></p>
-      <p><em>{props.alcoholContent}</em></p>
+      <h4>{props.price}</h4>
+      <h4>{props.ABV}</h4>
       <hr/>
       </div>
     );
-  }
 
   // function editCurrentKeg(){
   //   (<EditKeg
@@ -27,19 +26,17 @@ function Keg(props){
   // }
 
 
-return (
-  <div>
-  {content}
-  <p className='button' onClick={()=> editCurrentKeg()}>Edit Keg Information</p>
-    </div>
-  );
-}else {
-  return(
-    <div>
-    {content}
-    </div>
-  )
-}
+// return (
+//   <div>
+//   {content}
+//   <p className='button' onClick={()=> editCurrentKeg()}>Edit Keg Information</p>
+//     </div>
+//   );
+//   return(
+//     <div>
+//     {content}
+//     </div>
+//   )
 }
 
 
