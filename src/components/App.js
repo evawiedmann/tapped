@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from './Header'
 import KegList from './KegList';
-import EditKeg from './EditKeg'
 import NewKegForm from './NewKegForm';
 import Error404 from './Error404';
 import { Switch, Route } from 'react-router-dom';

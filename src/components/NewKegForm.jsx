@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Router } from 'react-router-dom';
 
 function NewKeg(props){
@@ -9,7 +8,7 @@ function NewKeg(props){
   let _abv = 0
 
   function postKeg(event){
-    event.preventDefault()
+    event.preventDefault();
     props.createKeg({name: _name.value, brand: _brand.value, price: _price.value, abv: _abv.value, reaminingPints: [124]});
     _name.value = '';
     _brand.value = '';
@@ -50,29 +49,33 @@ function NewKeg(props){
 
   return (
     <div onSubmit={postKeg}>
-      <form>
-        <input
-          type='text'
-          id='name'
-          placeholder='Beer Name'
-          ref={(input) => {_name = input}}/>
-        <input
-          type='text'
-          id='brand'
-          placeholder='Brewery Name'
-          ref={(input) => {_brand = input}}/>
-        <input
-          type='text'
-          id='price'
-          placeholder='Price Per Keg'
-          ref={(input) => {_price = input}}/>
-        <input
-          type='text'
-          id='alcoholContent'
-          placeholder='ABV'
-          ref={(input) => {_abv = input}}/>
-          <input type="submit" value="Add" />
-      </form>
+    <div className='form'>
+    <form>
+    <input
+    type='text'
+    id='name'
+    placeholder='Beer Name'
+    ref={(input) => {_name = input}}/>
+    <input
+    type='text'
+    id='brand'
+    placeholder='Brewery Name'
+    ref={(input) => {_brand = input}}/>
+    <input
+    type='text'
+    id='price'
+    placeholder='Price Per Keg'
+    ref={(input) => {_price = input}}/>
+    <input
+    type='text'
+    id='alcoholContent'
+    placeholder='ABV'
+    ref={(input) => {_abv = input}}/>
+    <div className='button'>
+    <input type="submit" value="Add" />
+    </div>
+    </form>
+    </div>
     </div>
   );
 }

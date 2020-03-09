@@ -1,16 +1,10 @@
 import React from "react";
-import EditKeg from './../EditKeg'
 import { Link } from 'react-router-dom';
 import { Router } from 'react-router-dom';
 
 function Keg(props){
   return (
     <div>
-    <style jsx>{`
-      div {
-        background-color: lavender;
-      }
-      `}</style>
       <h3>{props.name} - made by - {props.brand}</h3>
       <p><em>{props.price}</em></p>
       <p><em>{props.alcoholContent}</em></p>
@@ -19,19 +13,18 @@ function Keg(props){
     );
   }
 
-  function editCurrentKeg(){
-    (<EditKeg
-      id = {props.id}
-      name = {props.name}
-      brand = {props.brand}
-      price = {props.price}
-      ABV = {props.ABV}/>
-
-    )
-  }else {
-    null
-  }
-}
+  // function editCurrentKeg(){
+  //   (<EditKeg
+  //     id = {props.id}
+  //     name = {props.name}
+  //     brand = {props.brand}
+  //     price = {props.price}
+  //     ABV = {props.ABV}/>
+  //
+  //   )
+  // }else {
+  //   null
+  // }
 
 
 return (
