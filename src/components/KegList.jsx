@@ -1,8 +1,7 @@
 import React from 'react'
 
 function KegList(props) {
-  
-  render(){
+
     let kegStyle = {
       height: '90px',
       width: '400px',
@@ -35,13 +34,12 @@ function KegList(props) {
 
     return(
       <div style={kegStyle}>
-        <h4 style={kegContent}> {this.props.content}</h4>
+        <h4 style={kegContent}> {props.content}</h4>
         <div style={square}>
-          <p onClick={this.sellPint}style={anotherPint}>Sell</p><p>Pints Remaining:</p> {this.state.totalPints}
+          <p onClick={props.sellPint}style={anotherPint}>Sell</p><p>Pints Remaining:</p> {props.totalPints}
         </div>
       </div>
 
     )
   }
-}
-export default KegList
+export default KegList;

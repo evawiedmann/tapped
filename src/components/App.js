@@ -4,30 +4,34 @@ import KegList from './KegList';
 import EditKeg from './EditKeg'
 import NewKegForm from './NewKegForm';
 import Error404 from './Error404';
-import { Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import './App.css';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      allKegs: [],
-    }
+      allKegs: []
+    };
+
     this.handleAddNewKeg = this.handleAddNewKeg.bind(this)
     this.sellPint = this.sellPint.bind(this)
-
-    handleAddNewKeg(keg) {
-      let list = this.state.allKegs.slice();
-      list.push(keg)
-      this.setState({allKegs: list})
-    }
-    sellPint(){
-      let pintsVar = this.state.totalPints
-      pintsVar -= 1
-      this.setState({totalPints: pintsVar})
-    }
-    }
   }
+
+  handleAddNewKeg(keg) {
+    let list = this.state.allKegs.slice();
+    list.push(keg)
+    this.setState({allKegs: list})
+  }
+
+  sellPint(){
+    let pintsVar = this.state.totalPints;
+    pintsVar -= 1
+    this.setState({totalPints: pintsVar})
+  }
+
+
+render() {
 
   let content = {
     width: '400px',
@@ -38,8 +42,8 @@ class App extends React.Component {
     <div style={content}>
     <Header/>
     <Switch>
-    <Route exact path='/' render={()=><KegList allKegs={this.state.allKegs} />
-    <Route path='/NewKegForm' render={()=><NewKegForm handleAddNewKeg={this.handleAddNewKeg} />
+    <Route exact path='/' render={()=><KegList allKegs={this.state.allKegs}/>}/>
+    <Route path='/NewKegForm' render={()=><NewKegForm handleAddNewKeg={this.handleAddNewKeg}/>}/>
     <Route component={Error404} />
     </Switch>
     </div>

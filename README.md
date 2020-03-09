@@ -1,6 +1,6 @@
 # Tapped
 
-### By Eva Wiedmann, 2020-03-01
+### By Eva Wiedmann, 2020-03-08
 
 ## Description:
 This application was made as part of a coding project by Eva Wiedmann, a student at _[Epicodus](http://www.epicodus.com)_, a vocational school for technology careers based in Portland, OR. The project is designed to create an interactive keg library for to keep track of inventory for a hypothetical tap room.
