@@ -43,7 +43,9 @@ render() {
     <Header/>
     <Switch>
     <Route exact path='/' render={()=><KegList allKegs={this.state.allKegs}/>}/>
-    <Route path='/NewKegForm' render={()=><NewKegForm handleAddNewKeg={this.handleAddNewKeg}/>}/>
+    <Route path='/NewKegForm' render={()=><NewKegForm createKeg={this.handleAddNewKeg} kegList={this.state.allKegs}/>}/>
+
+
     <Route component={Error404} />
     </Switch>
     </div>
